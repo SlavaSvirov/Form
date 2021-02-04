@@ -1,6 +1,7 @@
 import React from "react";
 import { Input, Button } from "antd";
 import CustomInput from "./Input";
+import cn from "classnames";
 import styles from "./styles.module.css";
 
 const ApplicationForm = () => {
@@ -58,30 +59,32 @@ const ApplicationForm = () => {
           </p>
         </label>
       </div>
-      <div className={styles.formGroup}>
-        Выберите пол
-        <label className={styles.gender}>
-          Мужской
-          <Input
-            name="gender"
-            type="radio"
-            checked={formValues.gender === "male"}
-            value="male"
-            onChange={handleInputChange}
-          ></Input>
-        </label>
-        <label className={styles.gender}>
-          Женский
-          <Input
-            name="gender"
-            type="radio"
-            checked={formValues.gender === "female"}
-            value="female"
-            onChange={handleInputChange}
-          ></Input>
-        </label>
+      <div className={cn(styles.formGroup, styles.x)}>
+        <div className={styles.genderDescription}>Выберите пол</div>
+        <div className={styles.radioWrapper}>
+          <label className={styles.gender}>
+            Мужской
+            <Input
+              name="gender"
+              type="radio"
+              checked={formValues.gender === "male"}
+              value="male"
+              onChange={handleInputChange}
+            ></Input>
+          </label>
+          <label className={styles.gender}>
+            Женский
+            <Input
+              name="gender"
+              type="radio"
+              checked={formValues.gender === "female"}
+              value="female"
+              onChange={handleInputChange}
+            ></Input>
+          </label>
+        </div>
       </div>
-      <Button htmlType="submit" type="primary">
+      <Button className={styles.button} htmlType="submit" type="primary">
         Submit
       </Button>
     </form>
