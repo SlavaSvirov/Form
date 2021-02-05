@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Input, Button } from "antd";
+import cn from "classnames";
 import styles from "./styles.module.css";
+import entry from "../../img/entry.png";
 
 class LoginForm extends Component {
   state = {
@@ -23,11 +25,18 @@ class LoginForm extends Component {
     return (
       <form className={styles.form}>
         <h2>Sign In</h2>
+        <div className={styles.imgContainer}>
+          <img className={styles.image} src={entry} alt={"entry"}></img>
+          <img className={styles.image} src={entry} alt={"entry"}></img>
+          <img className={styles.image} src={entry} alt={"entry"}></img>
+          <img className={styles.image} src={entry} alt={"entry"}></img>
+          <img className={styles.image} src={entry} alt={"entry"}></img>
+        </div>
         <div className={styles.formGroup}>
           <label className={styles.labelName}>
             E-mail
             <p className={styles.inputWrapper}>
-              <i className="fas fa-user icon"></i>
+              <i className={cn(styles.icon, "fas fa-key")}></i>
               <Input
                 placeholder="example@yandex.ru"
                 className={styles.formControl}
@@ -42,7 +51,7 @@ class LoginForm extends Component {
           <label className={styles.labelName}>
             Password
             <p className={styles.inputWrapper}>
-              <i className="fas fa-key icon"></i>
+              <i className={cn(styles.icon, "fas fa-key")}></i>
               <Input
                 className={styles.formControl}
                 name="password"
