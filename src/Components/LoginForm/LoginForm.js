@@ -69,6 +69,9 @@ class LoginForm extends Component {
         <Button className={styles.button} onClick={this.handleClick}>
           Sign in
         </Button>
+        <Button className={styles.button} onClick={this.handleReset}>
+          Reset
+        </Button>
       </form>
     );
   }
