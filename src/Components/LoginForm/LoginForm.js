@@ -21,6 +21,10 @@ class LoginForm extends Component {
     console.log(this.state.password);
   };
 
+  handleReset = () => {
+    console.log("reset");
+  };
+
   render() {
     return (
       <form className={styles.form}>
@@ -36,13 +40,14 @@ class LoginForm extends Component {
           <label className={styles.labelName}>
             E-mail
             <p className={styles.inputWrapper}>
-              <i className={cn(styles.icon, "fas fa-key")}></i>
+              <i className={cn(styles.icon, "fas fa-user")}></i>
               <Input
                 placeholder="example@yandex.ru"
                 className={styles.formControl}
                 name="email"
                 value={this.state.email}
                 onChange={this.handleUserInput}
+                autoComplete="off"
               />
             </p>
           </label>
