@@ -22,7 +22,7 @@ class LoginForm extends Component {
   };
 
   handleReset = () => {
-    console.log("reset");
+    this.setState({ email: "", password: "" });
   };
 
   render() {
@@ -66,12 +66,14 @@ class LoginForm extends Component {
             </p>
           </label>
         </div>
-        <Button className={styles.button} onClick={this.handleClick}>
-          Sign in
-        </Button>
-        <Button className={styles.button} onClick={this.handleReset}>
-          Reset
-        </Button>
+        <div className={styles.logginBtn}>
+          <Button className={styles.button} onClick={this.handleClick}>
+            Sign in
+          </Button>
+          <Button className={styles.button} onClick={this.handleReset}>
+            Reset
+          </Button>
+        </div>
       </form>
     );
   }

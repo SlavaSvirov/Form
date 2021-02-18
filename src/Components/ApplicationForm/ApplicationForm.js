@@ -17,7 +17,6 @@ const ApplicationForm = () => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-
     setFormValues({ ...formValues, [name]: value });
   };
 
@@ -69,6 +68,7 @@ const ApplicationForm = () => {
               type="radio"
               checked={formValues.gender === "male"}
               value="male"
+              checked
               onChange={handleInputChange}
             ></Input>
           </label>

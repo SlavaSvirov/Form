@@ -27,3 +27,9 @@
   margin: 0 10px;
   color: #91d9e2d7;
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
