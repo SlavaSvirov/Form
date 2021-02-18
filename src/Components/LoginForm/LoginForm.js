@@ -7,10 +7,10 @@ import entry from "../../img/entry.png";
 class LoginForm extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
   };
 
-  handleUserInput = e => {
+  handleUserInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({ [name]: value });
@@ -59,6 +59,7 @@ class LoginForm extends Component {
               <i className={cn(styles.icon, "fas fa-key")}></i>
               <Input
                 className={styles.formControl}
+                type="password"
                 name="password"
                 value={this.state.password}
                 onChange={this.handleUserInput}

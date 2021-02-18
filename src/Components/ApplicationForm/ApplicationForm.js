@@ -6,13 +6,13 @@ import styles from "./styles.module.css";
 
 const ApplicationForm = () => {
   const [formValues, setFormValues] = React.useState({});
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formValues);
     setFormValues({});
   };
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     console.log(event);
     const target = event.target;
     const value = target.value;
@@ -68,7 +68,6 @@ const ApplicationForm = () => {
               type="radio"
               checked={formValues.gender === "male"}
               value="male"
-              checked
               onChange={handleInputChange}
             ></Input>
           </label>
