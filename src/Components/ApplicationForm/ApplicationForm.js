@@ -6,14 +6,13 @@ import styles from "./styles.module.css";
 
 const ApplicationForm = () => {
   const [formValues, setFormValues] = React.useState({});
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formValues);
     setFormValues({});
+    console.log(formValues);
   };
 
   const handleInputChange = (event) => {
-    console.log(event);
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -21,7 +20,7 @@ const ApplicationForm = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} method="get" onSubmit={handleSubmit}>
       <h2>Application</h2>
       <div className={styles.formGroup}>
         <CustomInput

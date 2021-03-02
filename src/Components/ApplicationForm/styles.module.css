@@ -5,10 +5,10 @@
   background: #4bd3b5d8;
   border-radius: 10px;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 .form:hover {
   box-shadow: 0 0 10px;
-  transition: 0.5s;
 }
 .formGroup {
   max-width: 100%;

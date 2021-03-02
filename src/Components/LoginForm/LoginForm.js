@@ -27,7 +27,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form className={styles.form}>
+      <form action="#" method="get" className={styles.form}>
         <h2>Sign In</h2>
         <div className={styles.imgContainer}>
           <img className={styles.image} src={entry} alt={"entry"}></img>
@@ -71,6 +71,7 @@ class LoginForm extends Component {
           <Button className={styles.button} onClick={this.handleClick}>
             Sign in
           </Button>
+
           <Button className={styles.button} onClick={this.handleReset}>
             Reset
           </Button>
