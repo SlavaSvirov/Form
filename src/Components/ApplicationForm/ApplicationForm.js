@@ -9,7 +9,7 @@ const ApplicationForm = () => {
 
   const handleSubmit = (e) => {
     setFormValues({});
-    console.log(formValues);
+    e.preventDefault();
   };
 
   const handleInputChange = (event) => {
@@ -26,7 +26,7 @@ const ApplicationForm = () => {
         <CustomInput
           onChange={handleInputChange}
           placeholder="Nickname"
-          name="nickname"
+          name="nickName"
           value={formValues.nickName}
         />
 
@@ -38,8 +38,8 @@ const ApplicationForm = () => {
         />
         <CustomInput
           onChange={handleInputChange}
-          placeholder="LastName"
-          name="lastname"
+          placeholder="Last Name"
+          name="lastName"
           value={formValues.lastName}
         />
         <label className={styles.labelName}>

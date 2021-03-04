@@ -82,8 +82,11 @@
     width: 45%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .form {
     width: 70%;
+  }
+  .imgContainer {
+    width: 20%;
   }
 }
